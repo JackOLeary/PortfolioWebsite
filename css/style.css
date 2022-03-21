@@ -1,0 +1,187 @@
+:root{
+    --mainText: white;
+    --navText: black;
+    --secondaryColor: #e1e7ff;
+    --theme1: #5680e9;
+    --theme2: #5a8dea;
+    --theme3: #84beeb;
+    --theme4: #8260d0;
+    --miscColor: rgb(193, 191, 201);
+}
+
+*{
+    padding:0;
+    margin:0;
+}
+
+body, label{
+    color: var(--secondaryColor);
+    font-family: 'IBM Plex Sans Thai Looped';
+    background-color: black;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1{
+    font-size: 60px;
+    margin-top:0;
+}
+
+.bi-caret-down{
+    font-size: 70px;
+    display:flex;
+    justify-content: center;
+    text-decoration: none;
+    /* margin-top: 300px; */
+}
+
+a{
+    text-decoration: none;
+    color: var(--secondaryColor);
+}
+
+/* Navbar Section */
+
+#navBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    gap: 20px;
+    width:100%;
+    height:60px;
+    z-index: 9999;
+    transition: top 0.3s;
+    background-color: black;
+    border-bottom: 2px var(--secondaryColor) solid;
+}
+
+/* Landing Page Section */
+
+#landingPageSection{
+    height: 100vh;
+    background: radial-gradient(ellipse at bottom right, var(--theme1) 20%, var(--theme2) 40%, var(--theme3) 60%, var(--theme4) 99%);
+    width: 100%;
+}
+
+#showcaseContainer{
+    text-align: center;
+    font-weight: 300;
+    padding-top: 300px;
+    margin-bottom: 330px;
+}
+
+/* Biography/About Me Section */
+
+#biographyContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 91vh;
+    gap:60px;
+    flex-direction: row;
+}
+
+.biographyText{
+    position:top;
+    width: 500px;
+}
+
+.biographyImage{
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Portfolio Section */
+
+#portfolioSection{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 40px;
+}
+
+.projectContainer{
+    display:flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+}
+
+.projectText{
+    width:65%;
+    background: var(--secondaryColor);
+    order: 2;
+    padding: 3%;
+    font-size: 12px;
+    color: black;
+    box-sizing: border-box;
+}
+
+.projectImage{
+    background-image: url("../img/nft.jpg");
+    height: 200px;
+    width: 65%;
+    border: 5px var(--secondaryColor) solid;
+    border-bottom: none;
+    order: 1;
+    box-sizing: border-box;
+}
+
+/* Contact Me Section */
+#contactSection{
+    height: 100vh;
+}
+
+#contactForm{
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-gap: 5%;
+    max-width: 700px;
+    margin: 2rem auto 0 auto;
+}
+
+#contactForm label {
+    grid-column: 1 / 2;
+}
+
+#contactForm input,textarea{
+    grid-column: 2/3;
+}
+
+.formButton{
+    height: 30px;
+    background-color: var(--theme3);
+    border-radius: 45px;
+}
+
+.formButton:hover {
+    background-color: var(--theme2);
+}
+
+.formButton:active {
+    background-color: var(--theme2);
+    box-shadow: 0 2px var(--theme4);
+    transform: translateY(2px);
+  }
+
+#formHeading{
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center;
+}
+
+/* #contactSection{
+    background-color: wheat;
+} */
+
+@media (max-width: 1000px) {
+    #biographyContainer{
+        flex-direction: column;
+    }
+    #portfolioSection{
+        grid-template-columns: 1fr;
+    }
+  }
+  
